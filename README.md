@@ -22,9 +22,28 @@
   
 ### Choice of Design Pattern:
 **1. Singleton:** Since Singleton serves the purpose when the task can be done using a single class, it is chosen for the implementation of static InMemory Database which is common and single across the application.<br />
+- Singleton Pattern would necessiate the instantiation of a class to a single instance<br />
+- In this case, the class representing Sengleton design pattern would be implemented to manage the inventory.<br />
+-  Every time we place and order the item check is performed using the commong inventory which is called once.<br />
+Below are the classes representing this design pattern<br /> 
+Inventory Class
 
-**2. Chain Of Responsibilities:** Since there are three categories, having chain of responsibilities will server the purpose of simultaneously checking input validity for the categories: Luxury,Essential,Misc and acting upon corresponding error handling.<br />
-**Strategy:** Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
-  
+**2. Strategy:** Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
+- Strategy accomodates in choosing a logic which would layout the decisions and actions depending on them. Here, a Strategy design pattern is used to check the input order and apply the logic to verify the quantity and category of the requested order and decide accordingly to produce output.csv output.txt file.<br />
+Below are the classes representing this design pattern<br /> 
+- InvalidOutput Class
+- ValidOutput Class
+- Interface OutputHandler Class
+   
+**3. Chain Of Responsibilities:** Since there are three categories, having chain of responsibilities will server the purpose of simultaneously checking input validity for the categories: Luxury,Essential,Misc and acting upon corresponding error handling.<br />
+   It is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decided either to process the request or to pass it to the next handler in the chain
+I have used Chain Of Responsibilities to determine if ordered is processed correctly or not.
+The following classes are used.
+- Class EssentialHandler
+- Class LuxuryHandler
+- Class MiscHandler
+- Interface OrderHandler
+   
+
   
   
