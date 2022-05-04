@@ -11,11 +11,11 @@ import order.GivenOrder;
 import java.io.*;
 import java.util.*;
 
-public class Client {
+public class Billing {
 
     // Starting the code from here
     public static void main(String [] args) throws Exception {
-        Client clientObject = new Client();
+        Billing clientObject = new Billing();
 
         // populating the database (cards and items)
         clientObject.populateInventory();
@@ -37,7 +37,7 @@ public class Client {
                 // reading the file
                 //String filePath = ch.split(",")[1];
                 File file = new File(ch);
-                System.out.println(file);
+                //System.out.println(file);
                 FileReader fr = new FileReader(file);
                 BufferedReader br = new BufferedReader(fr);
                 String line;
@@ -80,7 +80,7 @@ public class Client {
             }
         }
 
-        System.out.println("Thank you for Shopping. Visit Us Again!");
+        System.out.println("Thank you for Shopping, order details added to output file. Visit Us Again!");
 
     }
 

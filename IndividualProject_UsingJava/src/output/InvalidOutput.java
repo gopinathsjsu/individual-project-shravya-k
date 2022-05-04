@@ -53,7 +53,7 @@ public class InvalidOutput implements OutputStrategy {
         if(category.equals("Essential")){
             for(GivenOrder temp : order.getOrders()){
                 if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
-                    outputItems.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ "," + "");
+                    outputItems.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
 
                 }
             }
@@ -61,14 +61,14 @@ public class InvalidOutput implements OutputStrategy {
         else if(category.equals("Misc")){
             for(GivenOrder temp : order.getOrders()){
                 if(inventoryObj.getCategoryMap().get(temp.item).equals("Misc")){
-                    outputItems.append(temp.item + "," + "");
+                    outputItems.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
                 }
             }
         }
         else {
             for (GivenOrder temp : order.getOrders()) {
                 if (inventoryObj.getCategoryMap().get(temp.item).equals("Luxury")) {
-                    outputItems.append(temp.item + "," + "");
+                    outputItems.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
                 }
             }
         }
