@@ -45,22 +45,36 @@ The following classes are used.
 - Class EssentialHandler
 - Class LuxuryHandler
 - Class MiscHandler
-- Interface OrderHandler
-   
+- Interface OrderHandler<br />
 
+**Sample input file contents are present in input_2.csv**
+![runsampleinput](https://user-images.githubusercontent.com/12899997/166814283-85157c34-fc17-42c5-bcb9-627158dabfcc.png)
+<br /><br />
+![SampleInputFile](https://user-images.githubusercontent.com/12899997/166814274-7ec34bde-011f-4ade-bdb4-0b97bd6f5eda.png)
+<br /><br />
+**Below is the error file which is generated after input_2.csv file is fed as order inout**
+![Input_2 csv err file](https://user-images.githubusercontent.com/12899997/166814158-d167e3e8-f637-4e8e-8ea4-4a889be848d9.png)
+<br /><br />
+** input_1.csv file has a valid order items followed by sucessful order confirmation saved as output.csv**
 ![orderfrom_input_1csv](https://user-images.githubusercontent.com/12899997/166616398-c5eb5328-454f-4e67-8236-7803b06b42fb.png)
+
 ![ordersuccessoutput](https://user-images.githubusercontent.com/12899997/166616423-5328db40-c312-4c8a-9bec-4b7c7c421733.png)
-input_2.csv has order quantity which is more than the allowed cap for essentials category.
+<br /><br />
+**input_2.csv has order quantity which is more than the allowed cap for essentials category.**
 ![Orderquantityexceedscap](https://user-images.githubusercontent.com/12899997/166616719-ad1d95eb-c4e7-40a6-9c33-2ebc6c74ce8d.png)
-Output.txt file is generated for the above order to display the error quantity and item name
+ <br /><br />
+**Output.txt file is generated for the above order to display the error quantity and item name**
 ![errorfileinvalidorder](https://user-images.githubusercontent.com/12899997/166617008-79c60f8c-88ac-46b5-a471-cf43a5cb3f8a.png)
-Order is placed with item of quantity more than that present in inventory
+<br /><br />
+**Order is placed with item of quantity more than that present in inventory**
 ![quantityexceedsinventory](https://user-images.githubusercontent.com/12899997/166617196-de6ca2e7-e474-44db-ad34-7f770e894a97.png)
-Error message is displayed in output.txt file for the above order:
+<br /><br />
+**Error message is displayed in output.txt file for the above order:**
 ![outputerrorquantityexceeds](https://user-images.githubusercontent.com/12899997/166617257-f69ec9ad-60ad-4821-8659-a4babaa8b2e7.png)
-Order is placed with a card number which is not present in the cards inventory(Cards.csv):
+**Order is placed with a card number which is not present in the cards inventory(Cards.csv):**
 ![ordernewcard](https://user-images.githubusercontent.com/12899997/166617371-4070660d-03b0-4fed-af8c-09b9bf6f5719.png)
-After the order is placed the new card number is added to the inventory:
+   <br /><br />
+**After the order is placed the new card number is added to the inventory:**
 ![ordernewcard](https://user-images.githubusercontent.com/12899997/166617606-6988ef42-0242-42ab-999a-1c7a91237e21.png)
 ![newcardisaddedtoinventory](https://user-images.githubusercontent.com/12899997/166617624-d55dc2d1-0bde-4fd6-a429-eb501a94d23e.png)
  
