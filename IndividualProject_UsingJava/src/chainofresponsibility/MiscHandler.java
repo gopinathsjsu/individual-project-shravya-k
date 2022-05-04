@@ -28,12 +28,12 @@ public class MiscHandler implements OrderHandler {
         }
         if(!areQuantitiesValid){
             strategy = new InvalidOutput();
-            strategy.printOutput(order);
+            strategy.displayOutput(order);
         }
         //cap is 6 for Misc
         else if(miscItemCount > 6 ){
             strategy = new InvalidOutput();
-            strategy.printOutput(order,"Misc");
+            strategy.displayOutput(order,"Misc");
         }
 
         else{
@@ -60,7 +60,7 @@ public class MiscHandler implements OrderHandler {
             inventoryObj.setCards(presentCards);
 
             // print the output
-            strategy.printOutput(order);
+            strategy.displayOutput(order);
 
         }
     }

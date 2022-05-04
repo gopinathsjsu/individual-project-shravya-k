@@ -16,11 +16,11 @@ public class InvalidOutput implements OutputStrategy {
     // selected quantity exceed  available in inventory
     public void displayOutput(Order order) throws Exception {
         Inventory inventoryObj = Inventory.getInstance();
-        StringBuilder strb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         for(GivenOrder temp : order.getOrders()){
             if(temp.quantity > inventoryObj.getIndividualItemMap().get(temp.getItem())){
-                strb.append(temp.item);
-                strb.append(",");
+                sb.append(temp.item);
+                sb.append(",");
             }
         }
 
@@ -30,7 +30,7 @@ public class InvalidOutput implements OutputStrategy {
         BufferedWriter br = new BufferedWriter(new FileWriter(fileName));
         br.write("Please correct quantities as they exceed quantity available in inventory");
         br.newLine();
-        br.write(strb.toString());
+        br.write(sb.toString());
         br.close();
 
     }
@@ -39,13 +39,13 @@ public class InvalidOutput implements OutputStrategy {
     @Override
     public void displayOutput(Order order, String category) throws Exception {
         Inventory inventoryObj = Inventory.getInstance();
-        StringBuilder strb = new StringBuilder();
-        strb.append(category + " category has more items");
+        StringBuilder sb = new StringBuilder();
+        sb.append(category + " category has more items");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         String fileOutputName = "output_" + timestamp.getTime();
         String fileName = "data" + "/" + fileOutputName + ".txt";
         BufferedWriter br = new BufferedWriter(new FileWriter(fileName));
-        br.write(strb.toString());
+        br.write(sb.toString());
         br.newLine();
         br.write("Items ordered of " + category + " category exceeded the allowed order cap, please modify");
         br.newLine();

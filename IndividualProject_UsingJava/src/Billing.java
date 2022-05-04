@@ -22,21 +22,21 @@ public class Billing {
         clientObject.populateCards();
 
         // get order.Order
-        Scanner sc = new Scanner(System.in); // creating object of Scanner class
+        Scanner scan = new Scanner(System.in); // creating object of Scanner class
         System.out.println("Enter Order input file: data/InputFileName.csv");
 
-        String ch = "";
+        String userchoice = "";
         while(true){
             System.out.print("Choose an Order: ");
-            ch = sc.nextLine(); // reading user's choice
+            userchoice = scan.nextLine(); // reading user's choice
 ;
 //            System.out.println(ch);
             // If the user enters the order
-            if(ch.startsWith("data/")){
+            if(userchoice.startsWith("data/")){
 
                 // reading the file
                 //String filePath = ch.split(",")[1];
-                File file = new File(ch);
+                File file = new File(userchoice);
                 //System.out.println(file);
                 FileReader fr = new FileReader(file);
                 BufferedReader br = new BufferedReader(fr);

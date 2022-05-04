@@ -1,3 +1,0 @@
-Luxury category has more items
-Items ordered of Luxury category exceeded the allowed order cap, please modify
-Item: Handbag Quantity: 75, 

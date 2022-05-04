@@ -13,13 +13,13 @@ public class EssentialHandler implements OrderHandler {
     @Override
     public void handleOrder(Order order) throws Exception {
         Inventory inventoryObj = Inventory.getInstance();
-        int essentialItemCount = 0;
+        int essentialItemQuantity = 0;
         boolean areQuantitiesValid = true;
 
         // Check for invalid input
         for(GivenOrder temp : order.getOrders()){
             if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
-                essentialItemCount = essentialItemCount + temp.quantity;
+                essentialItemQuantity = essentialItemQuantity + temp.quantity;
                 if(temp.quantity > inventoryObj.getIndividualItemMap().get(temp.getItem())){
                     areQuantitiesValid = false;
                     break;
@@ -29,12 +29,12 @@ public class EssentialHandler implements OrderHandler {
         // if the total essential qty greater than allowed qty
         if(!areQuantitiesValid){
             strategy = new InvalidOutput();
-            strategy.printOutput(order);
+            strategy.displayOutput(order);
         }
         // cap is 3 for essentials
-        else if(essentialItemCount > 3 ){
+        else if(essentialItemQuantity > 3 ){
             strategy = new InvalidOutput();
-            strategy.printOutput(order,"Essential");
+            strategy.displayOutput(order,"Essential");
         }
 
         // Set the order to other

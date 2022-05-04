@@ -27,12 +27,12 @@ public class LuxuryHandler implements OrderHandler {
 
         if(!areQuantitiesValid){
             strategy = new InvalidOutput();
-            strategy.printOutput(order);
+            strategy.displayOutput(order);
         }
         //cap is 4 for luxury
         else if(luxuryItemCount > 4 ){
             strategy = new InvalidOutput();
-            strategy.printOutput(order,"Luxury");
+            strategy.displayOutput(order,"Luxury");
         }
         else{
             if(successor != null){

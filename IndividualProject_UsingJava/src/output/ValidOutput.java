@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 public class ValidOutput implements OutputStrategy {
 
     @Override
-    public void printOutput(Order order) throws Exception {
+    public void displayOutput(Order order) throws Exception {
         Inventory inventoryObj = Inventory.getInstance();
         float totalAmountPaid = 0;
         // calculate the total amount paid
@@ -57,7 +57,7 @@ public class ValidOutput implements OutputStrategy {
     }
 
     @Override
-    public void printOutput(Order order, String category) throws Exception {
+    public void displayOutput(Order order, String category) throws Exception {
         Inventory inventoryObj = Inventory.getInstance();
 
 
