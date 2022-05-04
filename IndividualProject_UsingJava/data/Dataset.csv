@@ -1,14 +1,14 @@
-Category,order.Item,Quantity,Price/ Piece
-Essential,Clothes,100,20
-Essential,Soap,200,5
-Essential,Shampoo,200,10
-Essential,Milk,1,5
-Luxury,Perfume,50,50
-Luxury,Chocolates,300,3
-Luxury,Handbag,75,150
-Luxury,Wallet,100,100
-Misc,Bedsheet,150,75
-Misc,Footware,200,25
-Misc,HomeDecorPiece,100,40
-Misc,pen,400,3
-Misc,pencil,400,3
+Item,Category,Quantity,Price/ Piece
+Clothes,Essential,100,20
+Soap,Essential,200,5
+Shampoo,Essential,200,10
+Milk,Essential,1,5
+Perfume,Luxury,50,50
+Chocolates,Luxury,300,3
+Handbag,Luxury,75,150
+Wallet,Luxury,100,100
+Bedsheet,Misc,1,75
+Footware,Misc,200,25
+HomeDecorPiece,Misc,100,40
+pen,Misc,400,3
+pencil,Misc,400,3

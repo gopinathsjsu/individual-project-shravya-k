@@ -108,18 +108,27 @@ public class Billing {
         while(line != null)
         {
             String [] lines = line.split(",");
-            if (lines[0].equals("Category")){
+            if (lines[0].equals("Item")){
                 line = br.readLine();
                 continue;
             }
-            Item itemObj = new Item(lines[0],lines[1],Double.valueOf(lines[2]),Double.valueOf(lines[3]));
-            selectedCategoryMap.put(lines[1],lines[0]);
+            
+
+            String category = lines[1];
+            String itemname = lines[0];
+            String Quantity = lines[2];
+            String PPP = lines[3];
+            Item itemObj = new Item(category,itemname,Double.valueOf(Quantity),Double.valueOf(PPP));
+
+            selectedCategoryMap.put(itemname,category);
             selectedItems.add(itemObj);
-            selectedPricePerQuantityMap.put(lines[1],Float.valueOf(lines[3]));
-            selectedCategoryCountMap.put(lines[0],selectedCategoryCountMap.getOrDefault(lines[0],0)+Integer.valueOf(lines[2]));
-            selectedIndividualItemMap.put(lines[1],selectedCategoryCountMap.getOrDefault(lines[1],0)+Integer.valueOf(lines[2]));
+            selectedPricePerQuantityMap.put(itemname,Float.valueOf(PPP));
+            selectedCategoryCountMap.put(category,selectedCategoryCountMap.getOrDefault(category,0)+Integer.valueOf(Quantity));
+            selectedIndividualItemMap.put(itemname,selectedCategoryCountMap.getOrDefault(itemname,0)+Integer.valueOf(Quantity));
             line = br.readLine();
         }
+        
+
         inventoryObj.setItems(selectedItems);
         inventoryObj.setCategoryMap(selectedCategoryMap);
         inventoryObj.setCategorCountMap(selectedCategoryCountMap);
