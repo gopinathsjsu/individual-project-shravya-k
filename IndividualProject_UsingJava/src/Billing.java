@@ -58,7 +58,7 @@ public class Billing {
                 	String [] orders = line.split(",");
 
                     // Removing the extra ""
-                    String Item = orders[0].replace("\"","");
+                    String Item = orders[0].replace("\"","").toLowerCase();
                    
                     int quantity = Integer.valueOf(orders[1].replace("\"",""));
                    // String cardNumber = lines[2].replace("\"","");
@@ -119,7 +119,7 @@ public class Billing {
             
 
             String category = lines[1];
-            String itemname = lines[0];
+            String itemname = lines[0].toLowerCase();
             String Quantity = lines[2];
             String PPP = lines[3];
             Item itemObj = new Item(category,itemname,Double.valueOf(Quantity),Double.valueOf(PPP));
@@ -132,6 +132,15 @@ public class Billing {
             line = br.readLine();
         }
         
+        System.out.println(selectedCategoryMap);
+        System.out.println(selectedItems);
+        //#######maps price/piece with item name
+        System.out.println(selectedPricePerQuantityMap);
+        //####maps total price per category
+        System.out.println(selectedCategoryCountMap);
+        //maps itemname to quantity
+       System.out.println(selectedIndividualItemMap);
+
 
         inventoryObj.setItems(selectedItems);
         inventoryObj.setCategoryMap(selectedCategoryMap);
