@@ -52,23 +52,23 @@ public class InvalidOutput implements OutputStrategy {
         StringBuilder outputItemsList = new StringBuilder();
         if(category.equals("Essential")){
             for(GivenOrder temp : order.getOrders()){
-                if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
-                    outputItemsList.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
+                if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")&& temp.quantity>3){
+                    outputItemsList.append("Item: "+temp.item +" "+"of category essentail and Quantity: "+temp.quantity+ ", " + "");
 
                 }
             }
         }
         else if(category.equals("Misc")){
             for(GivenOrder temp : order.getOrders()){
-                if(inventoryObj.getCategoryMap().get(temp.item).equals("Misc")){
-                    outputItemsList.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
+                if(inventoryObj.getCategoryMap().get(temp.item).equals("Misc")&& temp.quantity>6){
+                    outputItemsList.append("Item: "+temp.item +" "+" of category Misc and Quantity: "+temp.quantity+ ", " + "");
                 }
             }
         }
         else {
             for (GivenOrder temp : order.getOrders()) {
-                if (inventoryObj.getCategoryMap().get(temp.item).equals("Luxury")) {
-                    outputItemsList.append("Item: "+temp.item +" "+"Quantity: "+temp.quantity+ ", " + "");
+                if (inventoryObj.getCategoryMap().get(temp.item).equals("Luxury") && temp.quantity>4) {
+                    outputItemsList.append("Item: "+temp.item +" "+"of category Luxury and Quantity: "+temp.quantity+ ", " + "");
                 }
             }
         }

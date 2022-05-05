@@ -18,6 +18,7 @@ public class MiscHandler implements OrderHandler {
         int miscItemCount = 0;
         boolean areQuantitiesValid = true;
         for(GivenOrder temp : order.getOrders()){
+            System.out.println("Misc"+inventoryObj.getCategoryMap().get(temp.item));
             if(inventoryObj.getCategoryMap().get(temp.item).equals("Misc")){
                 miscItemCount = temp.quantity + miscItemCount;
                 if(temp.quantity > inventoryObj.getIndividualItemMap().get(temp.getItem())){
@@ -34,6 +35,7 @@ public class MiscHandler implements OrderHandler {
         else if(miscItemCount > 6 ){
             strategy = new InvalidOutput();
             strategy.displayOutput(order,"Misc");
+            System.out.println("misc:exc");
         }
 
         else{
@@ -44,6 +46,7 @@ public class MiscHandler implements OrderHandler {
 
             // updating the inventory
             for(GivenOrder temp : order.getOrders()){
+                inventoryObj.getCategoryMap().get(temp.item);
                 String itemCategory = inventoryObj.categoryMap.get(temp.item);
                 String item = temp.item;
                 categoryCountMap.put(itemCategory, categoryCountMap.get(itemCategory) - temp.quantity);

@@ -15,9 +15,10 @@ public class EssentialHandler implements OrderHandler {
         Inventory inventoryObj = Inventory.getInstance();
         int essentialItemQuantity = 0;
         boolean areQuantitiesValid = true;
-
         // Check for invalid input
         for(GivenOrder temp : order.getOrders()){
+            System.out.println("ESS"+inventoryObj.getCategoryMap().get(temp.item));
+
             if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
                 essentialItemQuantity = essentialItemQuantity + temp.quantity;
                 if(temp.quantity > inventoryObj.getIndividualItemMap().get(temp.getItem())){
@@ -25,6 +26,8 @@ public class EssentialHandler implements OrderHandler {
                     break;
                 }
             }
+          
+            
         }
         // if the total essential qty greater than allowed qty
         if(!areQuantitiesValid){
@@ -33,6 +36,7 @@ public class EssentialHandler implements OrderHandler {
         }
         // cap is 3 for essentials
         else if(essentialItemQuantity > 3 ){
+            System.out.println("ee:exc");
             strategy = new InvalidOutput();
             strategy.displayOutput(order,"Essential");
         }
