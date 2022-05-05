@@ -48,12 +48,13 @@ The following classes are used.
 - Interface OrderHandler<br />
 
 **Sample input file contents are present in input_2.csv**
-![runsampleinput](https://user-images.githubusercontent.com/12899997/166814283-85157c34-fc17-42c5-bcb9-627158dabfcc.png)
+![input_2file](https://user-images.githubusercontent.com/12899997/166874848-baf56853-e330-4289-adac-368aef8ba5ee.png)
 <br /><br />
-![SampleInputFile](https://user-images.githubusercontent.com/12899997/166814274-7ec34bde-011f-4ade-bdb4-0b97bd6f5eda.png)
+
 <br /><br />
 **Below is the error file which is generated after input_2.csv file is fed as order inout**
-![Input_2 csv err file](https://user-images.githubusercontent.com/12899997/166814158-d167e3e8-f637-4e8e-8ea4-4a889be848d9.png)
+![error_input_2](https://user-images.githubusercontent.com/12899997/166875824-0986791f-4b85-4227-ac10-0db2882c22de.png)
+
 <br /><br />
 ** input_1.csv file has a valid order items followed by sucessful order confirmation saved as output.csv**
 ![orderfrom_input_1csv](https://user-images.githubusercontent.com/12899997/166616398-c5eb5328-454f-4e67-8236-7803b06b42fb.png)
