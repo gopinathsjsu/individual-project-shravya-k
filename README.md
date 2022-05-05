@@ -28,8 +28,11 @@
 -  Every time we place and order the item check is performed using the commong inventory which is called once.<br />
 Below are the classes representing this design pattern<br /> 
 Inventory Class
-
-**2. Strategy:** Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
+Class Diagram:
+   
+<img width="623" alt="Screen Shot 2022-05-05 at 2 23 11 PM" src="https://user-images.githubusercontent.com/12899997/167027939-2403491f-80cb-4531-ba37-08603eee2efd.png">
+   <br />
+### 2. Strategy: Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
 **Resaon**<br />
 - Strategy accomodates in choosing a logic which would layout the decisions and actions depending on them. Here, a Strategy design pattern is used to check the input order and apply the logic to verify the quantity and category of the requested order and decide accordingly to produce output.csv output.txt file.<br />
 Below are the classes representing this design pattern<br /> 
@@ -47,6 +50,7 @@ The following classes are used.
 - Class MiscHandler
 - Interface OrderHandler<br />
 ### Class Diagram
+   (attached as classdiagram.pdf to the repo)
    <img width="766" alt="Screen Shot 2022-05-05 at 1 26 49 PM" src="https://user-images.githubusercontent.com/12899997/167020028-8c87373e-aedd-4909-843a-182400ad8a98.png">
 
 **Sample input file contents are present in input_2.csv**
