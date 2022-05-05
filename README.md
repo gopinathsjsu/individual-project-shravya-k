@@ -29,8 +29,8 @@
 Below are the classes representing this design pattern<br /> 
 Inventory Class
 Class Diagram:
-   
-<img width="1241" alt="classdiagram" src="https://user-images.githubusercontent.com/12899997/167031240-07e9e53c-ee66-41b1-a4f5-9ea988253033.png">
+  <img width="1211" alt="Screen Shot 2022-05-05 at 2 54 22 PM" src="https://user-images.githubusercontent.com/12899997/167033348-99bf5e1a-5444-4cda-a9f2-b49e7f13953d.png">
+ 
    <br />
 ### 2. Strategy: Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
 **Resaon**<br />
