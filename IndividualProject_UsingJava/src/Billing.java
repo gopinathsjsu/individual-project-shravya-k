@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.*;
 
 public class Billing {
-
+	static String cardNumber;
     // Starting the code from here
     public static void main(String [] args) throws Exception {
         Billing clientObject = new Billing();
@@ -44,20 +44,24 @@ public class Billing {
                 line = br.readLine();
                 boolean first = true;
                 Order obj = new Order();
-
+                
+                if (first){
+                	line = br.readLine();
+                	String [] firstorder = line.split(",");
+                	String Item = firstorder[0].replace("\"","");
+                    first = false;
+                    cardNumber = firstorder[2].replace("\"","");
+                    
+                }
                 while(line != null)
                 {
-                    String [] lines = line.split(",");
-                    if (first){
-                        first = false;
-                        line = br.readLine();
-                        continue;
-                    }
+                	String [] orders = line.split(",");
 
                     // Removing the extra ""
-                    String Item = lines[0].replace("\"","");
-                    int quantity = Integer.valueOf(lines[1].replace("\"",""));
-                    String cardNumber = lines[2].replace("\"","");
+                    String Item = orders[0].replace("\"","");
+                   
+                    int quantity = Integer.valueOf(orders[1].replace("\"",""));
+                   // String cardNumber = lines[2].replace("\"","");
 
                     // Set orders in the order object
                     GivenOrder pOrderObj = new GivenOrder(Item,quantity,cardNumber);
@@ -175,4 +179,3 @@ public class Billing {
         return h1;
     }
 }
-
