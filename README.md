@@ -30,7 +30,7 @@ Below are the classes representing this design pattern<br />
 Inventory Class
 Class Diagram:
    
-<img width="623" alt="Screen Shot 2022-05-05 at 2 23 11 PM" src="https://user-images.githubusercontent.com/12899997/167027939-2403491f-80cb-4531-ba37-08603eee2efd.png">
+<img width="1241" alt="classdiagram" src="https://user-images.githubusercontent.com/12899997/167031240-07e9e53c-ee66-41b1-a4f5-9ea988253033.png">
    <br />
 ### 2. Strategy: Each order after its being placed but be checked to see if the order is valid or not depending on the prerequisite conditions provided on the item quantity, cap of category etc. Strategy will server the purpose of outlining a check point for clearing the order validity.<br />
 **Resaon**<br />
@@ -51,7 +51,7 @@ The following classes are used.
 - Interface OrderHandler<br />
 ### Class Diagram
    (attached as classdiagram.pdf to the repo)
-   <img width="766" alt="Screen Shot 2022-05-05 at 1 26 49 PM" src="https://user-images.githubusercontent.com/12899997/167020028-8c87373e-aedd-4909-843a-182400ad8a98.png">
+
 
 **Sample input file contents are present in input_2.csv**
 ![input_2file](https://user-images.githubusercontent.com/12899997/166874848-baf56853-e330-4289-adac-368aef8ba5ee.png)
@@ -63,7 +63,7 @@ The following classes are used.
 **Below is the error file which is generated after input_2.csv file is fed as order inout**
 
 <br /><br />
-** input_1.csv file has a valid order items followed by sucessful order confirmation saved as output.csv**
+**input_1.csv file has a valid order items followed by sucessful order confirmation saved as output.csv**
 ![orderfrom_input_1csv](https://user-images.githubusercontent.com/12899997/166616398-c5eb5328-454f-4e67-8236-7803b06b42fb.png)
 
 ![ordersuccessoutput](https://user-images.githubusercontent.com/12899997/166616423-5328db40-c312-4c8a-9bec-4b7c7c421733.png)
