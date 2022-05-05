@@ -46,6 +46,8 @@ The following classes are used.
 - Class LuxuryHandler
 - Class MiscHandler
 - Interface OrderHandler<br />
+### Class Diagram
+   <img width="766" alt="Screen Shot 2022-05-05 at 1 26 49 PM" src="https://user-images.githubusercontent.com/12899997/167020028-8c87373e-aedd-4909-843a-182400ad8a98.png">
 
 **Sample input file contents are present in input_2.csv**
 ![input_2file](https://user-images.githubusercontent.com/12899997/166874848-baf56853-e330-4289-adac-368aef8ba5ee.png)
