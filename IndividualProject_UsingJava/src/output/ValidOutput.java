@@ -51,7 +51,7 @@ public class ValidOutput implements OutputStrategy {
 
         int i=1;
         for(Card card  : inventoryObj.cards){
-            System.out.println("Card " + i + "=" + card.getCardNumber());
+          //  System.out.println("Card " + i + "=" + card.getCardNumber());
             i++;
         }
     }
@@ -63,7 +63,7 @@ public class ValidOutput implements OutputStrategy {
 
         int i=1;
         for(Card card  : inventoryObj.cards){
-            System.out.println("Card " + i + "=" + card.getCardNumber());
+         //   System.out.println("Card " + i + "=" + card.getCardNumber());
             i++;
         }
     }

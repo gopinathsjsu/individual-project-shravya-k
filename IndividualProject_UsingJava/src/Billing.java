@@ -52,7 +52,39 @@ public class Billing {
                     first = false;
                     cardNumber = firstorder[2].replace("\"","");
                     
+
+           
+
+
+                    
                 }
+                String cardfilePath = "data/Cards.csv";
+                File cardfile = new File(cardfilePath);
+                FileReader cardfr = new FileReader(cardfile);
+                BufferedReader cardbr = new BufferedReader(cardfr);
+                String cardline;
+                cardline = cardbr.readLine();
+                //print CardNumber line
+                cardline = cardbr.readLine();
+                boolean iscardpresent = false;
+                while(cardline != null)
+                {
+                    if(cardline.equals(cardNumber)){
+                        iscardpresent = true;
+                        break;
+                        
+                    }
+                    cardline = cardbr.readLine();
+                }
+                
+                
+                if(! iscardpresent){
+                    
+                    FileWriter myWriter = new FileWriter("data/Cards.csv", true);
+                    myWriter.write("\n"+cardNumber);
+                    myWriter.close();
+                }
+                cardfr.close();
                 while(line != null)
                 {
                 	String [] orders = line.split(",");
@@ -132,16 +164,7 @@ public class Billing {
             line = br.readLine();
         }
         
-        System.out.println(selectedCategoryMap);
-        System.out.println(selectedItems);
-        //#######maps price/piece with item name
-        System.out.println(selectedPricePerQuantityMap);
-        //####maps total price per category
-        System.out.println(selectedCategoryCountMap);
-        //maps itemname to quantity
-       System.out.println(selectedIndividualItemMap);
-
-
+        
         inventoryObj.setItems(selectedItems);
         inventoryObj.setCategoryMap(selectedCategoryMap);
         inventoryObj.setCategorCountMap(selectedCategoryCountMap);
@@ -162,6 +185,7 @@ public class Billing {
         BufferedReader br = new BufferedReader(fr);
         String line;
         line = br.readLine();
+        
         while(line != null)
         {
             String [] lines = line.split(",");

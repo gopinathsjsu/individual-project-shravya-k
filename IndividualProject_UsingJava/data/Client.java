@@ -147,6 +147,7 @@ public class Billing {
             }
             Card cardObj = new Card((lines[0]));
             presentCards.add(cardObj);
+            System.out.println(presentCards);
             line = br.readLine();
         }
         inventoryObj.setCards(presentCards);
