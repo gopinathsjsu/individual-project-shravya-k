@@ -1,3 +1,0 @@
-Misc category has more items
-Items ordered of Misc category exceeded the allowed order cap, please modify
-Item: pen  of category Misc and Quantity: 10, 

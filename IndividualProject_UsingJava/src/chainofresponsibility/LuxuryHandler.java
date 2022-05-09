@@ -24,7 +24,7 @@ public class LuxuryHandler implements OrderHandler {
                     break;
                 }
             }
-            else if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
+            else if(inventoryObj.getCategoryMap().get(temp.item).equals("Essentials")){
              //   System.out.println("ess");
                 int essentialItemQuantity  =   temp.quantity;
                 if(!areQuantitiesValid){
@@ -35,7 +35,7 @@ public class LuxuryHandler implements OrderHandler {
                 else if(essentialItemQuantity > 3 ){
                  //   System.out.println("ee:exc");
                     strategy = new InvalidOutput();
-                    strategy.displayOutput(order,"Essential");
+                    strategy.displayOutput(order,"Essentials");
                 }
 
             }

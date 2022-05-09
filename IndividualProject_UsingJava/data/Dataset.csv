@@ -1,8 +1,8 @@
 Item,Category,Quantity,Price/ Piece
-Clothes,Essential,100,20
-Soap,Essential,200,5
-Shampoo,Essential,200,10
-Milk,Essential,1,5
+Clothes,Essentials,100,20
+Soap,Essentials,200,5
+Shampoo,Essentials,200,10
+Milk,Essentials,100,5
 Perfume,Luxury,50,50
 Chocolates,Luxury,300,3
 Handbag,Luxury,75,150

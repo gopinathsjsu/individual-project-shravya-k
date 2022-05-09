@@ -1,3 +1,7 @@
-Luxury category has more items
+
+Items ordered of Misc category exceeded the allowed order cap, please modify
+Item: pen  of category Misc and Quantity: 10, 
+
+
 Items ordered of Luxury category exceeded the allowed order cap, please modify
 Item: chocolates of category Luxury and Quantity: 5, 

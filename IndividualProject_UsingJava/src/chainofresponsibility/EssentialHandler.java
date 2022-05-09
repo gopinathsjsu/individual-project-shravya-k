@@ -19,7 +19,7 @@ public class EssentialHandler implements OrderHandler {
         for(GivenOrder temp : order.getOrders()){
            // System.out.println("ESS"+inventoryObj.getCategoryMap().get(temp.item));
 
-            if(inventoryObj.getCategoryMap().get(temp.item).equals("Essential")){
+            if(inventoryObj.getCategoryMap().get(temp.item).equals("Essentials")){
                 essentialItemQuantity = essentialItemQuantity + temp.quantity;
                 if(temp.quantity > inventoryObj.getIndividualItemMap().get(temp.getItem())){
                     areQuantitiesValid = false;
@@ -38,7 +38,7 @@ public class EssentialHandler implements OrderHandler {
         else if(essentialItemQuantity > 3 ){
          //   System.out.println("ee:exc");
             strategy = new InvalidOutput();
-            strategy.displayOutput(order,"Essential");
+            strategy.displayOutput(order,"Essentials");
         }
 
         // Set the order to other
