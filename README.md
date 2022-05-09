@@ -56,11 +56,10 @@ The following classes are used.
 **Sample input file contents are present in input_2.csv**
 ![input_2file](https://user-images.githubusercontent.com/12899997/166874848-baf56853-e330-4289-adac-368aef8ba5ee.png)
 <br /><br />
-![errfile1](https://user-images.githubusercontent.com/12899997/166885724-dcd0856c-d6e3-412d-9925-64255a873bba.png)
-![err2](https://user-images.githubusercontent.com/12899997/166885748-b4a3de50-47c5-42ef-8482-25b94fce63c1.png)
-
 <br /><br />
-**Below is the error file which is generated after input_2.csv file is fed as order inout**
+**Below is the error file which is generated after input_2.csv file is fed as order input**
+![Screen Shot 2022-05-09 at 3 59 01 PM](https://user-images.githubusercontent.com/12899997/167512084-6cc8cf3d-7162-4527-b0c4-3684370d9f65.png)
+
 
 <br /><br />
 **input_1.csv file has a valid order items followed by sucessful order confirmation saved as output.csv**
